@@ -165,8 +165,8 @@ void sendGA4Hit(QString measurement_id, QString api_secret, QString cid) {
     paramsObject["link_url"] = "link_url";
     paramsObject["link_text"] = "link_text";
     paramsObject["link_type"] = "click";
-    paramsObject["engagement_time_msec"] = "100";
-    paramsObject["debug_mode"] = 1;
+    paramsObject["engagement_time_msec"] = "1";
+    paramsObject["debug_mode"] = 1; //true - show debug view
 
     sendPageLevelDataToGA4(paramsObject);
 
@@ -196,15 +196,15 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    QString cid = "132082374.1692290545"; // needs to get dynamic solution
+    QString cid = "132082374.1692290545"; // dummy data - needs to get dynamic solution
 
     // UA configuration, and finction call
-    QString tid = "UA-380874-15";
+    QString tid = "UA-XXXXXX-XX";
     sendGoogleAnalyticsHit(tid, cid, "pageview" /* or "event" */);
 
     // GA4 configuration, and finction call
-    QString measurement_id = "G-4J525GPW2E";
-    QString api_secret = "GZSlx14mTR-TnZ0GLWR3ZQ";
+    QString measurement_id = "G-XXXXXXXXXX";
+    QString api_secret = "XXXXXXXXXX-XXXXXXXXXXX";
     sendGA4Hit(measurement_id, api_secret, cid);
 
     // Lunching the app window
