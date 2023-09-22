@@ -1,2 +1,1 @@
-# Coffee Machine
-Qt Framework (C++) Desktop App with Google Analytics Implementation for both UA and GA4 using measurement protocols.
+# coffee_machine
